@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --hintWhite: #000000;
+    --gray: #4E505F;
+    --blue: #4B5EFC;
+    --darkGray: #2E2F38;
+    --darkGrayMode: #2E2F38;
+    --numberHover: #3f404e;
+    --numberActive: #4e4f5e;
+    --hintHover: #596aff;
+    --hintActive: #6978ff;
+    --uniqueHintActive: #4E505F;
+    --uniqueHintHover: #5b5d6e;
+
+
+}
+
+[data-theme="light"] {
+    --darkGrayMode: #f0f1ff;
+    --black: #ffffff;
+    --white: #000000;
+    --gray: #c7c7c7;
+    --hintWhite: #ffffff;
+    --blue: #4B5EFC;
+    --darkGray: #eeeeee;
+    --numberHover: #d1d1d1;
+    --numberActive: #bebebe;
+    --hintHover: #596aff;
+    --hintActive: #6978ff;
+    --uniqueHintActive: #cacaca;
+    --uniqueHintHover: #c0c0c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+
+body {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 375px;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+@media (max-width:375px) {
+    .container {
+        padding: 20px 10px;
+    }
+}
+
+.work-sans {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.mode {
+    width: 69px;
+    height: 32px;
+    padding: 4px 0px 4px 0px;
+    border-radius: 16px;
+    background-color: var(--darkGrayMode);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--gray);
+    top: 4px;
+    left: 4px;
+    z-index: 3;
+    transition: all 0.2s;
+}
+
+html[data-theme="dark"] .circle {
+    left: 4px;
+}
+
+html[data-theme="light"] .circle {
+    left: 42px;
+}
+
+.screen_bar {
+    width: 100%;
+    height: calc(100vh - 524px);
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: right;
+}
+
+.history {
+    height: 47px;
+    color: #4f4f4f;
+    text-align: right;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46.92px;
+}
+
+.screen {
+    height: 60px;
+    color: var(--white);
+    text-align: right;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.row {
+    max-width: 335px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+.numbers_hints {
+    max-width: 335px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.number {
+    width: 71.75px;
+    height: 72px;
+    background-color: var(--darkGray);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.number:hover {
+    background-color: var(--numberHover);
+    transition: 0.2s;
+}
+
+.number:active {
+    background-color: var(--numberActive);
+    transition: 0.2s;
+}
+
+.hint {
+    width: 71.75px;
+    height: 72px;
+    background-color: var(--blue);
+    color: var(--hintWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.hint:hover {
+    background-color: var(--hintHover);
+    transition: 0.2s;
+}
+
+.hint:active {
+    background-color: var(--hintActive);
+    transition: 0.2s;
+}
+
+.unique_hint {
+    width: 71.75px;
+    height: 72px;
+    background-color: var(--gray);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.unique_hint:hover {
+    background-color: var(--uniqueHintHover);
+    transition: 0.2s;
+}
+
+.unique_hint:active {
+    background-color: var(--uniqueHintActive);
+    transition: 0.2s;
+}
+
+.unique_hint_2 {
+    fill: var(--white);
+}
